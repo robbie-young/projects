@@ -1,0 +1,83 @@
+<!-- Written by Thien K. M. Bui and Robbie Young
+last edited Nov 3, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Isitondisney.com</title>
+    <link rel="stylesheet" href="mockup3.css" type="text/css" />
+    <link rel="stylesheet" href="index.css" type="text/css"/>
+    <script type="text/javascript" src="mockup3.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Isitondisney.com</h1>
+        <div class='search-bar'>
+            <input class='search-bar' type="search" placeholder="title">
+            <!-- togglable -->
+            <div id="togglable">advanced</div>
+            <form action="" method="get" id="advanced-container">
+                <!-- checkboxes -->
+                <div class="form-input">
+                    <label for="movies">Movies </label>
+                    <input type="checkbox" name="movies" class="form-input" id="form-movies">
+    
+                    <label for="shows">TV shows </label>
+                    <input type="checkbox" name="shows" class="form-input" id="form-shows">
+                </div>
+                <!-- string searches -->
+                <div class="form-input">
+                    <label class="uniform-label" for="title">Title: </label>
+                    <input type="text" name="title" id="form-title">
+                </div>
+
+                <div class="form-input">
+                    <label class="uniform-label" for="directors">Director(s): </label>
+                    <input type="text" name="directors"  id="form-directors">
+                </div>
+
+                <div class="form-input" >
+                    <label class="uniform-label" for="cast">Cast(s): </label>
+                    <input type="text" name="cast" id="form-cast">
+                </div>
+
+                <!-- select based on presets, wrap in div to break out of flex direction-->
+                <div class="form-input">
+                    <label for="sort-by">Sort by:</label>
+                    <select name="sort-by" id="sort-by-select">
+                        <option value="title">Title</option>
+                        <option value="release-year">Release year</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+
+                <!-- submit button -->
+                <input type="submit" value="Search" id="form-submit">
+            </form>
+        </div>
+        <div id="contents-container">
+            <div id="contents-header">
+                <h2>Our Pick</h2> 
+                <h2>Next</h2>
+            </div>
+            <div class="content">
+                <div id="content-title">
+                    Frozen 2
+                </div>
+                <div class="content-subheading">
+                    <strong>Director(s):</strong> Will Steppanski, Will Sti, Will Steppanski, Will Steppanski, Will Steppanski
+                </div>
+                <div class="content-subheading">
+                    <strong>Cast(s):</strong> WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee
+                </div>
+                <div class="content-sypnopsis">
+                    <strong>Sypnopsis:</strong>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>

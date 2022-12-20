@@ -1,0 +1,42 @@
+Authors: Thien M. Bui, Robbie Young
+
+Dataset: https://www.kaggle.com/shivamb/disney-movies-and-tv-shows
+
+Dataset description:
+    Dataset containing data of movies and TV shows currently (Mid-2021) showing on Disney+ Streaming service.
+
+    Dataset includes basic information about the movies and TV shows (e.g. title, director, cast, duration, etc...)
+
+
+Features:
+
+STORY: As a user, I want to be able to find all content by providing the web page with its title so that I can see all content related to Pokemon
+IMPLEMENTATION: The user would type "Pokemon" into a search bar to get all content with "Pokemon" in its title
+
+STORY: As a user, I want to be able to search for content by inputting a certain director's name so that I can find all content created by Jeff Ondich
+IMPLEMENTATION: The user would click on an advanced options button (underneath the general search bar) and type in "Jeff Ondich" as the director
+
+STORY: As a user, I want to be able to find all content that an actor/actress is in so that I can see all content starring Jeff Ondich Jr.
+IMPLEMENTATION: The user would click on an advanced options button (underneath the general search bar) and type in "Jeff Ondich Jr." as the cast
+
+STORY: As a user, I want to be able to filter the returned result by type (movies/show) so that I can find all (only) movies related to Pokemon.
+IMPLEMENTATION: The user would click on advanced options and click the box saying to only include movies
+
+STORY: As a user, I want to be able to sort all returned content by release year so that I can see which content was created first.
+IMPLEMENTATION: The user would be able to click a sort by button in the advanced options tab OR when the results appear (e.g. Ironman 2 would be listed before Avengers: Endgame because it was released first)
+
+STORY: As a user, I want to be able to sort returned content by rating so that I don't have to watch bad movies/shows (movies with < 3 stars ratings) 
+IMPLEMENTATION: The user would be able to click a sort by button in the advanced options tab OR when the results appear to sort by contents' rating (e.g. Avenger: Endgame would appear higher than Ironman 2 because Endgame has a better rating)
+
+STORY: As a user, I want to be able to sort returned content by duration so that I budget my time better.
+IMPLEMENTATION: The user would be able to click a sort by button in the advanced options tab OR when the results appear to sort the results by contents' run length (e.g. Avengers: Endgame would appear after Ironman 2)
+
+STORY: As a user, I want to be able to be given recommendations for good movies/shows (where I can choose the type of content to be recommended, movies or shows) so that I don't have to choose every time.
+IMPLEMENTATION: The user would be able to click a drop down next to the pick for me button to be recommended only movies or tv shows
+
+STORY: As a user, I want to be able to provide a genre of content for the random recommendation so that I don't get recommended horror content every time. 
+IMPLEMENTATION: The user would be able to click a drop down next to the pick for me button to be recommended content pertaining to the horror genre
+
+TENTATIVELY (the feature below might take too long)
+STORY: As a user, I want to bookmark any show or movies that seem interesting so that I can refer back to them at a later time.
+IMPLEMENTATION: The user would be able to click on a movie and "star" it, adding it to a list which can be viewed after browsing for some time

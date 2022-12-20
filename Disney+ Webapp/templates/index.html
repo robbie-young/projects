@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='htmlHelper.js') }}" ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='getContents.js') }}" ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='formHandlers.js') }}" ></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='sort.js') }}" ></script>
+
+    <!-- <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" /> -->
+    <title>What2Watch.tv</title>
+</head>
+
+    <div id="container">
+        <header>
+            <h1 id="logo">What2Watch.tv</h1>
+            <form id="search-container">
+                <select name="genre" id="search-by">
+                    <option value="title">By Title</option>
+                    <option value="director">By Director</option>
+                    <option value="cast">By Cast</option>
+                </select>
+                <input id='search-bar' type="search" placeholder="search.."/>
+                <button type="submit" id="search-button">
+                    <img id="search-icon" src="../static/images/loupe.png" alt="search icon"/>
+                </button>
+            </form>
+        </header>
+        <div id="no-result-found">
+            No result found
+        </div>      
+        <div id="recommended-container">  
+            <h2>Recommended</h2>
+            <label for="genre">Genre:
+                <select name="genre" id="genre-select">
+                    <option value="action">Action</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="documentary">Documentary</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="science fiction">Science Fiction</option>
+                </select>
+            </label>
+            <button type="submit" id="recommend-button">
+                More
+            </button>
+            <div id="recommended-contents"></div>
+        </div>
+        <div id="contents-container">
+            <!-- breaking out of contents-container flex  -->
+            <div id="sort-container">
+                <label for="sort-by">Sort by</label>
+                <select name="sort-by" id="sort-by-select">
+                    <option value="title">Title</option>
+                    <option value="release_year">Release year</option>
+                    <option value="duration">Duration</option>
+                </select>
+            </div>
+            <h2 id="show-tag">TV Shows</h2>
+            <div id="tvshows-container">
+            </div>
+            <h2 id="movies-tag">Movies</h2>
+            <div id="movies-container">     
+            </div>
+        </div>   
+    </div>
+    <footer>
+        By Robbie Young and Thien Bui CS 257: Software Design Carleton College
+    </footer>
+</html>

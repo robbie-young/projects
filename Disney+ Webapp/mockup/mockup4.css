@@ -1,0 +1,168 @@
+/*
+mockup4.css
+Written by Thien K. M. Bui and Robbie Young  
+Last edited Nov 04, 2021
+*/
+
+#container {
+	display: flex;
+	/* background-color: turquoise; */
+	flex-direction: column;
+	align-items: center;
+	font-size: large;
+	min-width: var(--container-min-width);
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2.togglable {
+	font-size: x-large;
+}
+
+div.search-bar {
+	display: flex;
+	flex-direction: column;
+	/* background-color: lightgreen; */
+	width: 800px;
+	/* height: 100px; */
+}
+#search-container {
+	display: flex;
+}
+#search-icon {
+	background-color: red;
+}
+#main-search {
+	display: flex;
+	width: 800px;
+	/* background-color: red; */
+}
+
+input.search-bar {
+	background-color: rgb(211, 211, 211);
+	width: 100%;
+	height: 100%;
+	font-size: 2.25em;
+	font-family: inherit;
+}
+
+.togglable {
+	align-self: flex-end;
+}
+#contents-wrapper {
+	width: 80%;
+	/* background-color: lightgreen; */
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+}
+#contents-container {
+	width: 20%;
+	min-width: calc(var(--container-min-width) * 0.5);
+	/* background-color: maroon; */
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+#contents-header {
+	width: 100%;
+	margin-right: 50px;
+	/* background-color: lightgoldenrodyellow; */
+	display: flex;
+	justify-content: space-between;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 90%;
+	height: 400px;
+	/* background-color: lightgreen; */
+	align-self: center;
+	padding-left: 20px;
+	border: 3px solid black;
+}
+
+#content-title {
+	font-size: 1em;
+}
+.content-subheading {
+	font-size: 0.75em;
+	margin-left: 1.75em;
+	padding-right: 1em;
+}
+
+.content-sypnopsis {
+	font-size: 0.75em;
+	padding-right: 1em;
+}
+
+#togglable {
+	align-self: flex-end;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-decoration: underline;
+}
+
+#togglable:hover {
+	cursor: pointer;
+}
+
+#advanced-container {
+	display: none;
+	align-self: center;
+	width: 90%;
+	height: 250px;
+	background-color: rgb(213, 213, 213);
+	flex-direction: column;
+	align-items: space-between;
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border: 2px solid black;
+}
+
+.form-input {
+	margin-left: 10px;
+	display: flex;
+}
+
+.uniform-label {
+	display: block;
+	width: 6em;
+	/* background-color: red; */
+}
+#form-submit {
+	width: 20%;
+	height: 2.5em;
+	text-align: start;
+	font-size: medium;
+	align-self: flex-end;
+	margin-right: 20px;
+}
+
+#form-submit:hover {
+	cursor: pointer;
+}
+
+#repopulate-container {
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	/* background-color: red; */
+}
+
+#pick-for-me {
+	border: 2px solid black;
+	padding: 3px 3px 3px 3px;
+}
+
+#pick-for-me:hover {
+	cursor: pointer;
+	background-color: rgb(211, 211, 211);
+}

@@ -1,0 +1,170 @@
+AUTHORS: Kevin Bui, Robbie Young 
+last updated Nov 16 2021
+
+API ENDPOINT: /api 
+
+REQUEST: /
+RESPONSE: None, this route is purely for decorative purpose
+
+
+REQUEST: /help 
+RESPONSE: None, simply print out this help statement 
+
+
+REQUEST:/recommended
+
+GET parameters
+    genres (Optional, default: 'Action') -- returned recommendation will only be 
+        content of the specified genre.
+    
+    NOTE: this route return an exact match, the only tested strings are 
+        "Action",
+        "Comedy",
+        "Documentary",
+        "Mystery",
+        "Science Fiction"
+
+RESPONSE: a JSON list of dictionaries, each of which represents one
+content (Show or Movie), sorted alphabetically by title. Each dictionary in this
+list will have the following fields.
+
+    NOTE: this route's returned list will only have 1 item
+    NOTE: this parameter is not case sensitive and it DOES NOT ignore white spaces ("science_fiction" does not work, do "science fiction" or "science%20fiction")
+    NOTE: for duration property, if the returned object is of type "Movies", it will map to a JSON Dictionary with key "min"
+        , if it is of type "TV Show", it will map to a dictionary with key "season". It is either one or the other (or None), never at the same 
+        time.
+    NOTE: if any of the belowed fields are missing, the key will map to an empty string, not NULL or None.
+
+    type -- (TEXT) the type of content (either "Movie" or "TV Show")
+    title -- (TEXT) the content's title 
+    directors -- (TEXT) directors that has worked on this content, separated by commas 
+    cast -- (TEXT) cast members that has worked on this content, separated by commas 
+    date_added -- (TEXT) date this content was added to DisneyPlus
+    release_year -- (TEXT) date this content was released 
+    rating -- (TEXT) maturity rating of this content (PG-13, R, etc...)
+    genres -- (TEXT) genres that this content appear in (Action-Adventure, Action, Science Fiction, etc...)
+    description -- (TEXT) short description of this content 
+    duration -- (JSON Dictionary) the only values possible are 
+        min -- (INTEGER) total minutes of runtime  (only for Movies)
+        OR 
+        season -- (INTEGER) total number of seasons (only for TV Shows) 
+
+EXAMPLE(S):
+    /recommended?genres=Documentary
+
+    [
+    {"type": "Movie", "title": "I'll Be Home for Christmas", "directors": "Arlene Sanford", "cast": "Jonathan Thomas, 
+    Jessica Biel, Adam LaVorgna, Gary Cole, Eve Gordon, Lauren Maltby", "date_added": "November 12, 2019", "release_year": 1998, "rating": "PG", 
+    "genres": "Action-Adventure, Comedy, Coming of Age", 
+    "description": "A jokester zooms home for Christmas with a prize in mind \u2013 his dad's car!", "duration": {"min": "87"}}
+    ]
+
+    (No Frozen, because it's not listed under "documentary" genre)
+
+
+REQUEST:/titles/<titles_string>
+
+RESPONSE: a JSON list of dictionaries, each of which represents one
+content (Show or Movie), sorted alphabetically by title. Each dictionary in this
+list will have the following fields.
+
+    NOTE: this route is not case sensitive and it DOES NOT ignore white spaces ("leonardo_dicaprio" does not work, do "leonardo dicaprio" or "leonardo%20dicaprio)
+    NOTE: for duration property, if the returned object is of type "Movies", it will map to a JSON Dictionary with key "min"
+        , if it is of type "TV Show", it will map to a dictionary with key "season". It is either one or the other (or None), never at the same 
+        time.
+    NOTE: if any of the belowed fields are missing, the key will map to an empty string, not NULL or None.
+
+    type -- (TEXT) the type of content (either "Movie" or "TV Show")
+    title -- (TEXT) the content's title 
+    directors -- (TEXT) directors that has worked on this content, separated by commas 
+    cast -- (TEXT) cast members that has worked on this content, separated by commas 
+    date_added -- (TEXT) date this content was added to DisneyPlus
+    release_year -- (TEXT) date this content was released 
+    rating -- (TEXT) maturity rating of this content (PG-13, R, etc...)
+    genres -- (TEXT) genres that this content appear in (Action-Adventure, Action, Science Fiction, etc...)
+    description -- (TEXT) short description of this content 
+    duration -- (JSON Dictionary) the only values possible are 
+        min -- (INTEGER) total minutes of runtime  (only for Movies)
+        OR 
+        season -- (INTEGER) total number of seasons (only for TV Shows) 
+
+EXAMPLE(S):
+    /titles/Aladdin
+
+    [{"type": "Movie", "title": "Aladdin (1992)", "directors": "Ron Clements, John Musker", "cast": "Scott Weinger, Robin Williams, Linda Larkin, Jonathan Freeman, Frank Welker, Gilbert Gottfried", "date_added": "November 12, 2019", "release_year": 1992, "rating": "G", "genres": "Action-Adventure, Animation, Family", "description": "Aladdin, Princess Jasmine and Genie join forces to stop evil Jafar.", "duration": {"min": "94"}}, {"type": "Movie", "title": "Aladdin (2019)", "directors": "Guy Ritchie", "cast": "Will Smith, Mena Massoud, Naomi Scott, Marwan Kenzari, Navid Negahban, Nasim Pedrad", "date_added": "January 8, 2020", "release_year": 2019, "rating": "PG", "genres": "Action-Adventure, Family, Fantasy", "description": "From Disney comes the thrilling live-action adaptation of Aladdin.", "duration": {"min": "135"}}, {"type": "Movie", "title": "Aladdin and the King of Thieves", "directors": "Tad Stones", "cast": "Val Bettin, Jim Cummings, Gilbert Gottfried, Linda Larkin, Jerry Orbach, John Rhys-Davies", "date_added": "November 12, 2019", "release_year": 1996, "rating": "G", "genres": "Action-Adventure, Animation, Family", "description": "Aladdin and Jasmine plan their wedding\u2026but will the Forty Thieves ruin it?", "duration": {"min": "86"}}, {"type": "Movie", "title": "Aladdin: The Return of Jafar", "directors": "Toby Shelton, Tad Stones, Alan Zaslove", "cast": "Jason Alexander, Jeff Bennett, Val Bettin, Liz Callaway, Dan Castellaneta, Jim Cummings", "date_added": "November 12, 2019", "release_year": 1994, "rating": "G", "genres": "Action-Adventure, Animation, Family", "description": "Aladdin and his friends defend Agrabah from Jafar's malice.", "duration": {"min": "71"}}]
+
+    (there's been 4 Aladdin related contents)
+
+
+REQUEST:/directors/<director_string>
+
+RESPONSE: a JSON list of dictionaries, each of which represents one
+content (Show or Movie), sorted alphabetically by title. Each dictionary in this
+list will have the following fields.
+
+    NOTE: this route is not case sensitive and it DOES NOT ignore white spaces ("leonardo_dicaprio" does not work, do "leonardo dicaprio" or "leonardo%20dicaprio)
+    NOTE: for duration property, if the returned object is of type "Movies", it will map to a JSON Dictionary with key "min"
+        , if it is of type "TV Show", it will map to a dictionary with key "season". It is either one or the other (or None), never at the same 
+        time.
+    NOTE: if any of the belowed fields are missing, the key will map to an empty string, not NULL or None.
+
+    type -- (TEXT) the type of content (either "Movie" or "TV Show")
+    title -- (TEXT) the content's title 
+    directors -- (TEXT) directors that has worked on this content, separated by commas 
+    cast -- (TEXT) cast members that has worked on this content, separated by commas 
+    date_added -- (TEXT) date this content was added to DisneyPlus
+    release_year -- (TEXT) date this content was released 
+    rating -- (TEXT) maturity rating of this content (PG-13, R, etc...)
+    genres -- (TEXT) genres that this content appear in (Action-Adventure, Action, Science Fiction, etc...)
+    description -- (TEXT) short description of this content 
+    duration -- (JSON Dictionary) the only values possible are 
+        min -- (INTEGER) total minutes of runtime  (only for Movies)
+        OR 
+        season -- (INTEGER) total number of seasons (only for TV Shows) 
+
+EXAMPLE(S):
+    /directors/leona
+
+    [{"type": "Movie", "title": "Three Men and a Baby", "directors": "Leonard Nimoy", 
+    "cast": "Tom Selleck, Steve Guttenberg, Ted Danson, Margaret Colin, Celeste Holm, Nancy Travis", "date_added": "November 12, 2019", 
+    "release_year": 1987, "rating": "PG", "genres": "Buddy, Comedy", 
+    "description": "Handsome men trade wine, women and song for crib, pacifier and diaper.", "duration": {"min": "103"}}]    
+
+    (only contents with a director whose name contain the string "leona" was returned)
+
+REQUEST:/cast/<cast_string>
+
+RESPONSE: a JSON list of dictionaries, each of which represents one
+content (Show or Movie), sorted alphabetically by title. Each dictionary in this
+list will have the following fields.
+
+    NOTE: this route is not case sensitive and it DOES NOT ignore white spaces ("leonardo_dicaprio" does not work, do "leonardo dicaprio" or "leonardo%20dicaprio)
+    NOTE: for duration property, if the returned object is of type "Movies", it will map to a JSON Dictionary with key "min"
+        , if it is of type "TV Show", it will map to a dictionary with key "season". It is either one or the other (or None), never at the same 
+        time.
+    NOTE: if any of the belowed fields are missing, the key will map to an empty string, not NULL or None.
+
+    type -- (TEXT) the type of content (either "Movie" or "TV Show")
+    title -- (TEXT) the content's title 
+    directors -- (TEXT) directors that has worked on this content, separated by commas 
+    cast -- (TEXT) cast members that has worked on this content, separated by commas 
+    date_added -- (TEXT) date this content was added to DisneyPlus
+    release_year -- (TEXT) date this content was released 
+    rating -- (TEXT) maturity rating of this content (PG-13, R, etc...)
+    genres -- (TEXT) genres that this content appear in (Action-Adventure, Action, Science Fiction, etc...)
+    description -- (TEXT) short description of this content 
+    duration -- (JSON Dictionary) the only values possible are 
+        min -- (INTEGER) total minutes of runtime  (only for Movies)
+        OR 
+        season -- (INTEGER) total number of seasons (only for TV Shows) 
+
+EXAMPLE(S):
+    /cast/leonardo%20dicaprio
+
+    [{
+    "type": "Movie", "title": "Before the Flood", "directors": "Fisher Stevens", 
+    "cast": "Leonardo DiCaprio, John Kerry, Barack Obama, Bill Clinton", "date_added": "November 12, 2019", 
+    "release_year": 2016, "rating": "TV-14", "genres": "Documentary", "description": "Leonardo DiCaprio searches for answers on the issue of climate change.", "duration": {"min": "96"}}]   
+
+    (only contents with cast member whose name contain the string "leonardo dicaprio" was returned)
+

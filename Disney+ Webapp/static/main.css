@@ -1,0 +1,209 @@
+/*
+main.css
+Written by Thien K. M. Bui and Robbie Young  
+Last edited Nov 23, 2021
+*/
+
+#container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: large;
+	min-height: 100vh;
+	min-width: var(--container-min-width);
+}
+
+header {
+	background-color: #2b2d42;
+	min-width: var(--container-min-width);
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+footer {
+	position: relative;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+}
+h1#logo {
+	font-style: italic;
+	color: var(--header-logo-color);
+	margin-right: 50px;
+	padding: 10px 10px 10px 10px;
+}
+#search-container {
+	display: flex;
+	align-items: center;
+}
+
+select#search-by {
+	height: 55px;
+	font-size: 1.15em;
+	padding-left: 5px;
+	border-radius: 10px;
+	margin-right: 10px;
+	background-color: rgb(230, 230, 230);
+}
+select#search-by:hover {
+	cursor: pointer;
+}
+input#search-bar {
+	background-color: rgb(230, 230, 230);
+	border-radius: 10px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-right: none;
+	padding-left: 5px;
+	font-size: 1.5em;
+	height: 55px;
+	font-family: inherit;
+}
+
+#search-button {
+	background-color: rgb(230, 230, 230);
+	width: 65px;
+	height: 52px;
+	border-radius: 10px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+}
+
+#search-button:hover {
+	cursor: pointer;
+}
+#search-icon {
+	width: 25px;
+	height: 25px;
+}
+
+#search-button {
+	width: 50px;
+}
+.togglable {
+	align-self: flex-end;
+}
+
+#no-result-found {
+	display: none;
+	background-color: rgba(255, 92, 92, 0.857);
+}
+
+/*Recommended container ---------------------------------------- */
+
+#recommended-container {
+	width: 90%;
+}
+
+#recommend-button:hover {
+	cursor: pointer;
+}
+/* recommended contents  */
+#recommended-contents {
+	display: flex;
+	padding-bottom: 20px;
+}
+/*---------------------------------------- */
+
+/* searched contents container  -------------------------*/
+#contents-container {
+	display: none;
+	flex-direction: column;
+	padding-bottom: 50px;
+	justify-content: center;
+	width: 90%;
+	min-width: calc(var(--container-min-width));
+}
+
+#sort-container {
+	margin-top: 20px;
+}
+#sort-by-select {
+	width: fit-content;
+}
+#show-tag {
+	display: none;
+}
+#tvshows-container {
+	display: none;
+	flex-wrap: wrap;
+	padding-bottom: 20px;
+	min-width: calc(var(--container-min-width) + 100px);
+}
+#movies-tag {
+	display: none;
+}
+#movies-container {
+	border-left: none;
+	border-right: none;
+	min-width: calc(var(--container-min-width) + 100px);
+	padding-bottom: 10px;
+	display: none;
+	flex-wrap: wrap;
+}
+
+/*---------------------------------------------------------*/
+
+/* each individual content ------------------------------------------------------- */
+.content-container {
+	width: 350px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	padding-left: 30px;
+	margin-left: 40px;
+	margin-top: 20px;
+	border: 3px solid black;
+	border-radius: 10px;
+	box-shadow: 8px 8px 1px 1px rgb(162, 162, 162);
+}
+.content-header {
+	width: 100%;
+	margin-right: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 82%;
+	height: 350px;
+	align-self: center;
+}
+
+.content-title {
+	font-size: 1em;
+}
+.content-subheading {
+	font-size: 0.75em;
+	margin-left: 1.75em;
+	padding-right: 1em;
+	margin-bottom: 0;
+}
+
+.content-sypnopsis {
+	font-size: 0.75em;
+	padding-right: 1em;
+}
+/*------------------------------------------------------- */
+
+#form-submit {
+	width: 20%;
+	height: 2.5em;
+	text-align: start;
+	font-size: medium;
+	align-self: flex-end;
+	margin-right: 20px;
+}
+
+#form-submit:hover {
+	cursor: pointer;
+}

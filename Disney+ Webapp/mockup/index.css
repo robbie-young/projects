@@ -1,0 +1,21 @@
+/*
+index.css
+Written by Thien K. M. Bui and Robbie Young  
+Last edited Nov 02, 2021
+*/
+
+:root {
+	--container-min-width: 800px;
+}
+
+html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+	font-size: xx-large;
+}
+
+h2 {
+	font-size: large;
+}

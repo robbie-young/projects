@@ -1,0 +1,6 @@
+\copy super_table from 'super_table.csv' DELIMITER ',' CSV NULL as 'NA'
+\copy type from 'type.csv' DELIMITER ',' CSV NULL as 'NA'
+\copy countries from 'countries.csv' DELIMITER ',' CSV NULL as 'NA'
+\copy date_added from 'date_added.csv' DELIMITER ',' CSV NULL as 'NA'
+\copy rating from 'rating.csv' DELIMITER ',' CSV NULL as 'NA'
+\copy genres from 'genres.csv' DELIMITER ',' CSV NULL as 'NA'

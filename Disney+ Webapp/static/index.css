@@ -1,0 +1,28 @@
+/*
+index.css
+Written by Thien K. M. Bui and Robbie Young  
+Last edited Nov 23, 2021
+*/
+
+:root {
+	--container-min-width: 800px;
+	--header-height: 150px;
+	--header-logo-color: #bcbedc;
+	--background-color: 237, 241, 245;
+}
+
+html {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+	background-color: rgb(var(--background-color));
+	margin: 0px;
+}
+h1 {
+	font-size: xx-large;
+}
+
+h2 {
+	font-size: xx-large;
+}

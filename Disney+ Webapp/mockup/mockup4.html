@@ -1,0 +1,173 @@
+<!-- Written by Thien K. M. Bui and Robbie Young
+last edited Nov 4, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>whatsondisney.com</title>
+    <link rel="stylesheet" href="mockup4.css" type="text/css" />
+    <link rel="stylesheet" href="index.css" type="text/css"/>
+    <script type="text/javascript" src="mockup3.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Does Disney Plus have it?</h1>
+        <div class='search-bar'>
+            <div id="search-container">
+                <input class='search-bar' type="search" placeholder="search..">
+                <!-- <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="240" height="80" viewBox="0 0 640 480" xml:space="preserve">
+                    <g transform="matrix(1.25 0 0 1.25 310 199)"  >
+                    <circle style="stroke: rgb(0,0,0); stroke-width: 3; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  cx="0" cy="0" r="40" />
+                    </g>
+                    <g transform="matrix(0.24 -0.21 0.53 0.58 369.87 263.98)"  >
+                    <polygon style="stroke: rgb(0,0,0); stroke-width: 3; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: none; fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  points="-50,-50 -50,50 50,50 50,-50 " />
+                    </g>
+                </svg> -->
+            </div>
+            <!-- togglable -->
+            <div id="togglable">advanced</div>
+            <form action="" method="get" id="advanced-container">
+                <!-- checkboxes -->
+                <div class="form-input">
+                    <label for="movies">Movies </label>
+                    <input type="checkbox" name="movies" class="form-input" id="form-movies">
+    
+                    <label for="shows">TV shows </label>
+                    <input type="checkbox" name="shows" class="form-input" id="form-shows">
+                </div>
+                <!-- string searches -->
+                <div class="form-input">
+                    <label class="uniform-label" for="title">Title: </label>
+                    <input type="text" name="title" id="form-title">
+                </div>
+
+                <div class="form-input">
+                    <label class="uniform-label" for="directors">Director(s): </label>
+                    <input type="text" name="directors"  id="form-directors">
+                </div>
+
+                <div class="form-input" >
+                    <label class="uniform-label" for="cast">Cast(s): </label>
+                    <input type="text" name="cast" id="form-cast">
+                </div>
+
+                <!-- select based on presets, wrap in div to break out of flex direction-->
+                <div class="form-input">
+                    <label for="sort-by">Sort by:</label>
+                    <select name="sort-by" id="sort-by-select">
+                        <option value="title">Title</option>
+                        <option value="release-year">Release year</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+
+                <!-- submit button -->
+                <input type="submit" value="Search" id="form-submit">
+            </form>
+        </div>
+        <div id="repopulate-container">
+            <div id="sort-by-container">
+                <label for="sort-by">Sort by:</label>
+                <select name="sort-by" id="sort-by-select">
+                    <option value="title">Title</option>
+                    <option value="release-year">Release year</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+            <div id="pick-for-me">
+                Pick for me!
+            </div>
+        </div>
+        <div id = "contents-wrapper">
+            <div id="contents-container">
+                <div class="content">
+                    <div id="content-title">
+                        Frozen 2
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Director(s):</strong> Will Steppanski, Will Sti, Will Steppanski, Will Steppanski, Will Steppanski
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Cast(s):</strong> WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee
+                    </div>
+                    <div class="content-sypnopsis">
+                        <strong>Sypnopsis:</strong>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </div>
+                </div>
+            </div>  
+            <div id="contents-container">
+                <div class="content">
+                    <div id="content-title">
+                        Frozen 2
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Director(s):</strong> Will Steppanski, Will Sti, Will Steppanski, Will Steppanski, Will Steppanski
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Cast(s):</strong> WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee
+                    </div>
+                    <div class="content-sypnopsis">
+                        <strong>Sypnopsis:</strong>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </div>
+                </div>
+            </div> 
+            <div id="contents-container">
+                <div class="content">
+                    <div id="content-title">
+                        Frozen 2
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Director(s):</strong> Will Steppanski, Will Sti, Will Steppanski, Will Steppanski, Will Steppanski
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Cast(s):</strong> WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee
+                    </div>
+                    <div class="content-sypnopsis">
+                        <strong>Sypnopsis:</strong>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </div>
+                </div>
+            </div> 
+            <div id="contents-container">
+                <div class="content">
+                    <div id="content-title">
+                        Frozen 2
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Director(s):</strong> Will Steppanski, Will Sti, Will Steppanski, Will Steppanski, Will Steppanski
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Cast(s):</strong> WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee
+                    </div>
+                    <div class="content-sypnopsis">
+                        <strong>Sypnopsis:</strong>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </div>
+                </div>
+            </div> 
+            <div id="contents-container">
+                <div class="content">
+                    <div id="content-title">
+                        Frozen 2
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Director(s):</strong> Will Steppanski, Will Sti, Will Steppanski, Will Steppanski, Will Steppanski
+                    </div>
+                    <div class="content-subheading">
+                        <strong>Cast(s):</strong> WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee, WBruce W. Lee
+                    </div>
+                    <div class="content-sypnopsis">
+                        <strong>Sypnopsis:</strong>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                    </div>
+                </div>
+            </div> 
+        </div>
+      
+    </div>
+</body>
+</html>

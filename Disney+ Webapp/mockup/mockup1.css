@@ -1,0 +1,76 @@
+/*
+mockup1.css
+Written by Thien K. M. Bui and Robbie Young  
+Last edited Nov 02, 2021
+*/
+
+#container {
+	display: flex;
+	/* background-color: turquoise; */
+	flex-direction: column;
+	align-items: center;
+	font-size: large;
+	min-width: var(--container-min-width);
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h2.togglable {
+	font-size: x-large;
+}
+
+div.search-bar {
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	height: 100px;
+}
+input.search-bar {
+	background-color: rgb(211, 211, 211);
+	width: 100%;
+	height: 100%;
+	font-size: 2.25em;
+	font-family: inherit;
+}
+
+.togglable {
+	align-self: flex-end;
+}
+
+#contents-container {
+	width: 35%;
+	min-width: calc(var(--container-min-width) * 0.7);
+	/* background-color: maroon; */
+	display: flex;
+	flex-direction: column;
+}
+#contents-header {
+	width: 100%;
+	margin-right: 50px;
+	/* background-color: lightgoldenrodyellow; */
+	display: flex;
+	justify-content: space-between;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 90%;
+	height: 400px;
+	/* background-color: lightgreen; */
+	align-self: center;
+	padding-left: 20px;
+	border: 3px solid black;
+}
+
+#content-title {
+	font-size: 1.25em;
+}
+#content-subheading {
+	font-size: 1em;
+	margin-left: 2em;
+	padding-right: 0.25em;
+}
