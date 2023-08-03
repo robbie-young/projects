@@ -4,7 +4,7 @@ Please note that these projects are not yet intended to be downloaded and have n
 
 RELEVANT COURSEWORK (full list):
 
-  Computer Science courses: Introducction to Computer Science, Data Structures, Introduction to Computer Systems, Programming Languages,
+  Computer Science courses: Introduction to Computer Science, Data Structures, Introduction to Computer Systems, Programming Languages,
                             Software Design, Algorithms, Computability and Complexity (planned), Computer Security, Cryptography,
                             History of Computing, Computer Graphics, Machine Learning (planned)
   
